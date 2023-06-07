@@ -1,0 +1,133 @@
+@import './variables';
+
+form.contact-form {
+    background-color: #fffffff7;
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+            margin: auto;
+}
+
+.contact-form h6 {
+    text-align: center;
+    margin: 10px 0px;
+    margin-bottom: 2em;
+    font-size: 1.5rem;
+}
+
+.form-floating {
+    position: relative;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 2rem 0.6rem 1rem;
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #60697b;
+    background-color: #fefefe;
+    background-clip: padding-box;
+    border: 1px solid rgba(8, 60, 130, .07);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 1.25rem rgba(30, 34, 40, .04);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-floating>.form-control,
+.form-floating>.form-select {
+    height: calc(2.5rem + 2px);
+    line-height: 1.25;
+}
+
+.form-floating>label {
+    color: #959ca9;
+    font-size: .75rem;
+}
+
+.form-floating>label {
+    height: 100%;
+    padding: 0.6rem 1rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+}
+
+.form-floating>label {
+    padding-top: 0.65rem;
+}
+
+.valid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .7rem;
+    color: #198754;
+}
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .7rem;
+    color: #dc3545;
+}
+
+.form-select {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 2rem 0.6rem 1rem;
+    -moz-padding-start: calc(1rem - 3px);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #959ca9;
+    background-color: #fefefe;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 8px 6px;
+    border: 1px solid rgba(8, 60, 130, .07);
+    border-radius: 0.4rem;
+    box-shadow: 0 0 1.25rem rgba(30, 34, 40, .04);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input.btn.btn-primary.btn-sm.btn-send {
+    width: 100%;
+    margin: 0;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+.btn-nav{
+    background-color: $color-primary;
+    border: 0;
+        padding: 15px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+    border-radius: 5px;
+}
+.btn-nav:hover {
+    background-color: #26394e;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+.contact-form h6{
+    color: $color-primary;
+}
+.contact-form h6 {
+    color: #363949;
+    font-weight: 500;
+}

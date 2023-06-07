@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*------------------------------------root variables-----------------------------*/
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dak: #363949;
+    --color-light: rgba(132, 139, 200, .2);
+    --color-primary-varient: #111e88;
+    --color-dark-varient: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dak);
+}
+
+a {
+    color: var(--color-dak);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: .87rem;
+}
+
+h4 {
+    font-size: .8rem;
+}
+
+h5 {
+    font-size: .77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.text-muted {
+    color: var(--color-info-dark);
+}
+
+p {
+    color: var(--color-dark-varient);
+}
+
+b {
+    color: var(--color-dak);
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+aside {
+    height: 100vh;
+    background: #fff;
+}
+
+aside .top {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo {
+    display: flex;
+    gap: .8rem;
+}
+
+aside .logo img {
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .close {
+    display: none;
+}
+
+/*-------------------------------------------------------navbar---------------------------------------------*/
+nav {
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 0;
+}
+
+nav .nav-container .row {
+    align-items: center;
+}
+
+nav .nav-container .row .col-md-12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 96%;
+    margin: 0 auto;
+}
+
+nav img.logo {
+    width: 7rem;
+}
+
+nav .search-bar {
+    background: var(--color-light);
+    padding: var(--padding-1) var(--card-padding);
+    width: 32vw;
+    border-radius: var(--border-radius-2);
+    display: flex;
+    align-items: center;
+    color: var(--color-light);
+    margin: auto;
+}
+
+nav .search-bar input[type='search']::placeholder {
+    color: gray;
+}
+
+nav .search-bar input[type='search'] {
+    background-color: transparent;
+}
+
+nav .profile-area {
+    display: flex;
+}
+
+.navbar-brand {
+    text-align: center;
+}
+
+.navbar-brand>a {
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.search-bar span.material-symbols-outlined {
+    color: gray;
+}
+
+nav .profile-area .profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+nav .profile-area .profile-photo {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+nav .profile-area button {
+    display: none;
+}
+
+/*--------------------------------------------------------sidebar-------------------------------------------*/
+aside .sidebar {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside h3 {
+    font-weight: 500;
+    margin: 0;
+}
+
+aside .sidebar .side-nav {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+
+aside .sidebar .side-nav span {
+    font-size: 1.6rem;
+    transition: all .5s ease;
+}
+
+aside .sidebar .side-nav:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar .side-nav.active {
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+    padding-left: 2rem;
+}
+
+aside .sidebar .side-nav.active::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+    left: 0;
+    position: absolute;
+}
+
+aside .sidebar .side-nav.active span {
+    color: var(--color-primary);
+    /* margin-left: calc(16px-3px); */
+}
+
+aside .sidebar .side-nav:hover {
+    color: var(--color-primary);
+}
+
+aside .sidebar .side-nav:hover span {
+    margin-left: 1rem;
+}
+
+.profile h5 {
+    margin: 0;
+}
+
+/*----------------------------------------------------------main page-------------------------------------------------*/
+main {
+    margin-top: 1.4rem;
+}
+
+main .date {
+    display: inline-block;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-1);
+    margin-top: 1rem;
+    padding: .5rem 1.6rem;
+}
+
+main .insights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+main .insights>div {
+    background-color: #fff;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all .5s ease;
+    flex-basis: 30%;
+}
+
+main .insights>div:hover {
+    box-shadow: none;
+}
+
+main .insights>div span {
+    background: var(--color-primary);
+    padding: .5rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+}
+
+main .insights>div.expense span {
+    background-color: var(--color-danger);
+}
+
+main .insights>div.income span {
+    background-color: var(--color-success);
+}
+
+main .insights>div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3 {
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+main .insights .progress-main {
+    width: 92px;
+    height: 92px;
+    position: relative;
+    border-radius: 50%;
+}
+
+main .insights svg {
+    width: 7rem;
+    height: 7rem;
+}
+
+main .insights svg circle {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+
+main .insights .sales svg circle {
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .insights .expense svg circle {
+    stroke-dashoffset: 20;
+    stroke-dasharray: 80;
+}
+
+main .insights .income svg circle {
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+
+main .insights .progress-main .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .insights small {
+    display: block;
+    margin-top: 1.3rem;
+}
+
+/*---------------------------------------------------------------chart---------------------------------------------------------*/
+canvas#chart {
+    background-color: #fff;
+    max-width: 100%;
+    margin-top: 2rem;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+.table-box {
+    background-color: #fff;
+    max-width: 100%;
+    margin-top: 2rem;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-color-type: var(--color-primary) !important;
+    --bs-table-bg-type: var(--color-light) !important;
+}
+
+.table-striped th {
+    background-color: var(--color-light) !important;
+    color: #333 !important;
+    padding: 1rem;
+}
+
+.table-striped td {
+    padding: 1rem;
+}
+
+/*----------------------------------------------------------------------responsive--------------------------------------------------------------*/
+nav .profile-area button {
+    display: block;
+}
+
+.sidebar-col {
+    transform: translateX(-400px);
+    width: 300px;
+    margin: 0 20px;
+    transition: all .5s;
+}
+
+.main-row {
+    display: flex;
+}
+
+button#menu-btn {
+    background: transparent;
+    margin: 0 20px;
+    color: var(--color-primary);
+}
+
+.navbar-brand>a {
+    color: var(--color-primary);
+}
+
+.sidebar-col.open {
+    transform: translateX(0);
+    transition: all .5s ease;
+}
+
+.main-page {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: -300px;
+}
+
+.main-page.open {
+    margin-left: 0px;
+}
+.navbar-brand {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+button#menu-btn svg {
+    font-size: 25px;
+}
+
+.nav-container .search-bar{
+    height: auto;
+}
+.profile h5 {
+    margin: 0;
+    font-size: 1rem;
+}
+.profile svg{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+main .insights>div span {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    position: relative;
+}
+main .insights .material-symbols-outlined svg{
+    width: auto;
+    height: auto;
+    position: absolute;
+}
+.progress-chart{
+    background-color: #fff;
+    max-width: 100%;
+    margin-top: 2rem;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+.recharts-wrapper{
+    margin: auto!important;
+}
+.profile{
+    position: relative;
+
+    .profile-options{
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #fff;
+        z-index: 99;
+        display: none;
+    }
+
+    .profile-options.open{
+        display: block;
+    }
+    
+    ul{
+        margin: 0;
+        padding: 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+        li{
+            padding: 10px 25px;
+            transition: all .5s;
+            cursor: pointer;
+
+            span{
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            &:hover{
+                background-color: #7380ec;
+                transition: all .5s;
+                color: #fff;
+            }
+        }
+
+    }
+}

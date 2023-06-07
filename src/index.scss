@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*----------------------------------------------------variables------------------------------------------------*/
+@import './assets/sass/variables';
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    background:  $color-background;
+    user-select: none;
+    overflow-x: hidden;
+    color:  $color-dak;
+}
+
+a {
+    color:  $color-dak;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: .87rem;
+}
+
+h4 {
+    font-size: .8rem;
+}
+
+h5 {
+    font-size: .77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.text-muted {
+    color:  $color-info-dark;
+}
+
+p {
+    color:  $color-dark-varient;
+}
+
+b {
+    color:  $color-dak;
+}
+
+.primary {
+    color:  $color-primary;
+}
+
+.danger {
+    color:  $color-danger;
+}
+
+.success {
+    color:  $color-success;
+}
+
+.warning {
+    color:  $color-warning;
+}
+.add-job-section{
+    background-color: #fff;
+        padding: var(--card-padding);
+        border-radius: var(--card-border-radius);
+        margin-top: 1rem;
+        box-shadow: var(--box-shadow);
+        transition: all 0.5s ease;
+
+        .form-label {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+}
+.form-btn-container{
+    display: flex;
+    justify-content: space-between;
+
+    .register-btn{
+        flex-basis: 45%;
+        height: 40px;
+    }
+}

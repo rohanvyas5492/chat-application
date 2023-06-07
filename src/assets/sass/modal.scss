@@ -1,0 +1,73 @@
+.login-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 9;
+    padding: 50px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    transform: translateX(500px);
+    transition: all .5s ease;
+}
+.login-modal.open{
+    transform: translateX(0px);
+    transition: all .5s ease;
+}
+.modal-header {
+    position: relative;
+    margin-bottom: 50px;
+}
+.modal-header h2 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.modal-close svg{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.login-btn {
+    background-color: #7380ec;
+    border: 0;
+    padding:5px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+}
+.login-btn:hover{
+    background-color: #26394e;
+        cursor: pointer;
+        color: white;
+        transition: 0.5s;
+}
+.form-divider{
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+}
+.form-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(50% - 0.1rem);
+    height: 2px;
+    width: 100%;
+    background-color: #e2e2e2;
+}
+.form-divider h3 {
+    position: relative;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    z-index: 1;
+    display: inline-block;
+    font-size: 1rem;
+}
