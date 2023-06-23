@@ -9,13 +9,13 @@ const Dashboard = () => {
     <div className='row'>
                 <div className='col-md-12'>
                 <main>
-                  <div class="page-heading">
+                  <div class="page-heading mt-5">
                       <h1>Dashboard</h1>
                   </div>
                   <div class="insights">
-                    <ScoreCard text={'sales'} price={25000} percent={81} icon={<AiOutlineAreaChart />}/>
-                    <ScoreCard text={'expense'} price={5000} percent={60} icon={<AiOutlineBarChart />}/>
-                    <ScoreCard text={'income'} price={15000} percent={41} icon={<AiOutlineLineChart />}/>
+                    <ScoreCard text={'chats'} price={150} percent={81} icon={<AiOutlineAreaChart />}/>
+                    <ScoreCard text={'groups'} price={20} percent={60} icon={<AiOutlineBarChart />}/>
+                    <ScoreCard text={'messages'} price={1234} percent={41} icon={<AiOutlineLineChart />}/>
                   </div>
                   </main>
                 </div>

@@ -1,20 +1,20 @@
 import React from 'react'
-import UserTable from '../../components/admin/UserTable'
+import StaffTable from '../../components/admin/StaffTable'
 import '../../assets/sass/userTable.scss';
 
-const AllUsers = () => {
+const CreateStaff = () => {
   return (
-    <div className='row'>
+<div className='row'>
       <div className='col-md-12'>
       <main>
         <div class="page-heading mt-5">
-            <h1>Manage Users</h1>
+            <h1>Manage Staff</h1>
         </div>
-        <UserTable heading={'Users'}/>
+        <StaffTable heading={'Staff Members'}/>
         </main>
       </div>
     </div>
   )
 }
 
-export default AllUsers
+export default CreateStaff

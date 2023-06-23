@@ -559,3 +559,152 @@ main .insights .material-symbols-outlined svg{
 
     }
 }
+/*------------------------------------------------login-------------------------------------------------*/
+.admin-login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 500px;
+}
+a.app-brand-link.gap-2 {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+button.btn.btn-primary.d-grid.w-100 {
+    padding: 10px;
+}
+.form-control:focus,
+.form-select:focus{
+    box-shadow: none;
+}
+/*------------------------------------------------filter user----------------------------------------------*/
+.user-wrap {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #555;
+            line-height: 1.5;
+            width: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: #fff;
+}
+
+.search {
+    margin-bottom: 15px
+}
+
+.search label,
+.search input {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px
+}
+
+.search input {
+    padding: 5px;
+}
+
+.list-wrap {
+    max-height: 250px;
+    padding: 1px 0;
+    overflow-y: auto;
+    
+}
+.user-list{
+    padding: 0;
+    margin: 0;
+}
+.user-list li {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border: 1px solid gray;
+    margin-bottom: -1px;
+    color: gray;
+}
+
+.user-list li.no-match {
+    animation-name: no-match;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    height: 0;
+    opacity: 0;
+    border-width: 0;
+}
+
+.user-list li.match {
+    animation-name: match;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes no-match {
+    0% {
+        height: 45px;
+        opacity: 1;
+        border-width: 1px;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+        border-width: 0;
+    }
+}
+
+@keyframes match {
+    0% {
+        height: 0;
+        opacity: 0;
+        border-width: 0;
+    }
+
+    100% {
+        height: 45px;
+        opacity: 1;
+        border-width: 1px;
+    }
+}
+
+.user-list li label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 11px 0 0 0;
+    display: block;
+    z-index: 1;
+}
+
+.user-list li label:before {
+    content: '\2610';
+    padding: 0 15px;
+}
+
+.user-list li label:hover {
+    background: #EEF7FF;
+    cursor: pointer;
+}
+
+.user-list li input[type="checkbox"] {
+    display: none;
+}
+
+.user-list li input[type="checkbox"]:checked+label {
+    background: #428bca;
+    color: #fff;
+}
+
+.user-list li input[type="checkbox"]:checked+label:before {
+    content: '\2611';
+    padding: 0 15px;
+}
+.main-page{
+    padding: 0 50px;
+}

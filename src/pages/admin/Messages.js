@@ -6,8 +6,8 @@ const Messages = () => {
 <div className='row'>
       <div className='col-md-12'>
       <main>
-        <div class="page-heading">
-            <h1>Messages</h1>
+        <div class="page-heading mt-5">
+            <h1>Messages Count</h1>
         </div>
         <MessageTable />
         </main>

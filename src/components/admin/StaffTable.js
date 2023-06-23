@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router'
 const UserTable = ({heading}) => {
   const navigate = useNavigate();
   const [isActive,setIsActive] = useState(false);
-  const [isVerified,setIsVerified] = useState(false);
 
   return (
     <div className='user-table'>
@@ -13,7 +12,7 @@ const UserTable = ({heading}) => {
   <div className="row row--top-40">
     <div className="col-md-12" style={{display:'flex',justifyContent:'space-between'}}>
       <h2 className="row__title">{heading} (5)</h2>
-      <button className="register-btn btn btn-primary" onClick={()=>navigate('../add-user')}>Add User</button>
+      <button className="register-btn btn btn-primary" onClick={()=>navigate('../create-staff')}>Add Staff</button>
     </div>
   </div>
   <div className="row row--top-20">
@@ -26,7 +25,6 @@ const UserTable = ({heading}) => {
               <th className="table__th">Name</th>
               <th className="table__th">Mobile Number</th>
               <th className="table__th">Status</th>
-              <th className="table__th">Verified/Not Verified</th>
               <th className="table__th">User Type</th>
               <th className="table__th">Role</th>
               <th className="table__th">Action</th>
@@ -48,9 +46,6 @@ const UserTable = ({heading}) => {
               </td>
               <td  data-column="Status" className="table-row__td">
                 <p className={`table-row__status status ${isActive ? 'status--green' : 'status--red'}`} onClick={()=>setIsActive(!isActive)}>{isActive?'Active':'Not Active'}</p>
-              </td>
-              <td  data-column="Status" className="table-row__td">
-                <p className={`table-row__status status ${isVerified ? 'status--green' : 'status--red'}`} onClick={()=>setIsVerified(!isVerified)}>{isVerified?'Verified':'Not Verified'}</p>
               </td>
               <td data-column="Progress" className="table-row__td">
                 <p className="table-row__progress">User</p>

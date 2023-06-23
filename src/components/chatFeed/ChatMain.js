@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import chat from '../../assets/images/chat.jpg'
 import ChatAreaFooter from './ChatAreaFooter'
-
+import {SlOptionsVertical} from 'react-icons/sl'
+import audio from '../../assets/vivo.mp3'
 const ChatMain = () => {
+    const [isOptionsOpen,setIsOptionsOpen] = useState(false);
   return (
     <div className="chat-area">
                 <div className="chat-area-header">
@@ -15,7 +17,20 @@ const ChatMain = () => {
                             src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%281%29+%281%29.png" alt="" />
                         
                         <span>+4</span>
+                        <div className='more-options' style={{marginLeft:'10px'}}>
+                            <div className='options-icon' onClick={()=>setIsOptionsOpen(!isOptionsOpen)}><SlOptionsVertical /></div>
+                            <div className={isOptionsOpen ? 'options-list open' : 'options-list'}>
+                              <ul>
+                                <li><span>Group Info</span></li>
+                                <li><span>Select Messages</span></li>
+                                <li><span>Mute</span></li>
+                                <li><span>Clear Messages</span></li>
+                                <li><span>Exit Group</span></li>
+                              </ul>
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
                 <div className="chat-area-main">
                     <div className="chat-msg">
@@ -88,6 +103,21 @@ const ChatMain = () => {
                         <div className="chat-msg-content">
                             <div className="chat-msg-text">Consectetur adipiscing elit pellentesque habitant morbi tristique
                                 senectus et.</div>
+                        </div>
+                    </div>
+                    <div className="chat-msg owner">
+                        <div className="chat-msg-profile">
+                            <img
+                                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3364143/download+%283%29+%281%29.png"
+                                alt="" className="chat-msg-img account-profile" />
+                            <div className="chat-msg-date">Message seen 3.16pm</div>
+                        </div>
+                        <div className="chat-msg-content">
+                            <div class="audio-wrapper">
+                                <audio controls class="js-audio audio">
+                                    <source src={audio} type="audio/mpeg"></source>
+                                </audio>
+                            </div>
                         </div>
                     </div>
                     

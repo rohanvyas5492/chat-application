@@ -2,36 +2,38 @@ import React, { useState } from 'react'
 import { Button, Col, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import FormRow from '../../components/admin/FormRow'
-import FormRowSelect from '../../components/admin/FormRowSelect'
 
 const CreateUser = () => {
 
-  const userOptions = ['User','Staff'];
-  const roleOptions = ['User','Staff'];
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [location, setLocation] = useState('');
-  const [userType, setUserType] = useState('');
-  const [role, setRole] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [isEditing, setIsEditing] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     switch (name) {
-      case 'name':
-        setName(value);
+      case 'first-name':
+        setFirstName(value);
+        break;
+      case 'last-name':
+        setLastName(value);
+        break;
+      case 'mobile':
+        setMobile(value);
+        break;
+      
+      case 'password':
+        setPassword(value);
+        break;
+      case 'confirm-password':
+        setConfirmPassword(value);
         break;
       case 'email':
         setEmail(value);
-        break;
-      case 'location':
-        setLocation(value);
-        break;
-      case 'userType':
-        setUserType(value);
-        break;
-      case 'role':
-        setRole(value);
         break;
       default:
         break;
@@ -45,11 +47,12 @@ const CreateUser = () => {
   };
 
   const handleClearForm = () => {
-    setName('');
+    setFirstName('');
+    setLastName('');
     setEmail('');
-    setLocation('');
-    setUserType('');
-    setRole('');
+    setMobile('');
+    setConfirmPassword('');
+    setPassword('')
   };
 
   return (
@@ -57,17 +60,20 @@ const CreateUser = () => {
 <div className='row'>
       <div className='col-md-12'>
       <main>
-        <div class="page-heading">
+        <div class="page-heading mt-5">
             <h1>Create User</h1>
         </div>
         <div className='add-job-section'>
       <Form className='dashboard-form'>
       <Row>
-      <Col md={4}><FormRow type='text' name='name' value={name} handleChange={(handleChange)} labelText='Name'/></Col>
+      <Col md={4}><FormRow type='text' name='first-name' value={firstName} handleChange={(handleChange)} labelText='First Name'/></Col>
+      <Col md={4}><FormRow type='text' name='last-name' value={lastName} handleChange={(handleChange)} labelText='Last Name'/></Col>
+      <Col md={4}><FormRow type='tel' name='mobile' value={mobile} handleChange={(handleChange)} labelText='Mobile Number'/></Col>
+
       <Col md={4}><FormRow type='text' name='email' value={email} handleChange={handleChange} labelText='Email'/></Col>
-      <Col md={4}><FormRow type='text' name='location' value={location} handleChange={handleChange} labelText='Location'/></Col>
-      <Col md={4}><FormRowSelect name='userType' value={userType} handleChange={handleChange} labelText='User Type' list={userOptions}/></Col>
-      <Col md={4}><FormRowSelect name='role' value={role} handleChange={handleChange} labelText='Role' list={roleOptions}/></Col>
+      <Col md={4}><FormRow type='password' name='password' value={password} handleChange={(handleChange)} labelText='Password'/></Col>
+      <Col md={4}><FormRow type='password' name='confirm-password' value={confirmPassword} handleChange={(handleChange)} labelText='Confirm Password'/></Col>
+
       <Col md={4}><p></p>
       <div className='form-btn-container'>
       <Button className='register-btn clear-btn' style={{marginTop:'20px'}}>Clear</Button>

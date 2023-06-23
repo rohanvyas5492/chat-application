@@ -8,7 +8,7 @@ const AdminNav = ({open,status}) => {
 
   return (
     <nav>
-        <div className="nav-container">
+        <div className="nav-container container-fluid">
             <div className="row">
                 <div className="col-md-2">
                     <div className="navbar-brand">

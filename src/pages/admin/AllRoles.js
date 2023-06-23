@@ -1,5 +1,5 @@
 import React from 'react'
-import UserTable from '../../components/admin/UserTable'
+import RoleTable from '../../components/admin/RoleTable'
 import '../../assets/sass/userTable.scss';
 
 const AllUsers = () => {
@@ -8,9 +8,9 @@ const AllUsers = () => {
       <div className='col-md-12'>
       <main>
         <div class="page-heading mt-5">
-            <h1>Manage Users</h1>
+            <h1>Manage Roles</h1>
         </div>
-        <UserTable heading={'Users'}/>
+        <RoleTable heading={'Roles'}/>
         </main>
       </div>
     </div>

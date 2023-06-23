@@ -9,7 +9,7 @@ const ScoreCard = ({text,price,percent,icon}) => {
         <div class="middle">
             <div class="left">
                 <h3>Total {text}</h3>
-                <h1>Rs {price}</h1>
+                <h1>{price}</h1>
             </div>
             <div class="progress-main">
                 <svg>

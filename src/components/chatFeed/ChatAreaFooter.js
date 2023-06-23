@@ -4,6 +4,7 @@ import {HiOutlinePhotograph} from 'react-icons/hi'
 import {IoAddCircleOutline} from 'react-icons/io5'
 import {RiAttachment2} from 'react-icons/ri'
 import {VscSmiley} from 'react-icons/vsc'
+import {BsFillMicFill} from 'react-icons/bs'
 
 const ChatAreaFooter = () => {
   return (
@@ -25,7 +26,7 @@ const ChatAreaFooter = () => {
             <VscSmiley />
         </div>            
         <div className='chat-footer-icon'>
-            <BiLike />
+            <BsFillMicFill />
         </div>            
     </div>
   )

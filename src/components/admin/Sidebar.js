@@ -3,9 +3,10 @@ import {GrFormClose} from 'react-icons/gr'
 import {AiFillDashboard,AiOutlineUser,AiOutlineMail,AiOutlineLogout} from 'react-icons/ai'
 import {MdOutlineAnalytics,MdReportGmailerrorred} from 'react-icons/md'
 import {IoMdSettings} from 'react-icons/io'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Sidebar = () => {
+const navigate = useNavigate();
 
   return (
     <aside>
@@ -17,42 +18,51 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <div className="sidebar">
-                        <NavLink className="side-nav" to='/'>
+                        <NavLink className="side-nav" to='/admin/dashboard'>
                             <span className="material-symbols-outlined">
                                 <AiFillDashboard />
                             </span>
                             <h3>Dashboard</h3>
                         </NavLink>
-                        <NavLink className="side-nav" to='/all-users'>
+                        <NavLink className="side-nav" to='/admin/all-roles'>
+                            <span className="material-symbols-outlined">
+                                <AiOutlineMail />
+                            </span>
+                            <h3>Manage Role</h3>
+                        </NavLink>
+                        <NavLink className="side-nav" to='/admin/all-users'>
                             <span className="material-symbols-outlined">
                                 <AiOutlineUser />
                             </span>
-                            <h3>All Users</h3>
+                            <h3>Manage User</h3>
                         </NavLink>
-                        <NavLink className="side-nav" to='/add-user'>
+                        <NavLink className="side-nav" to='/admin/staff-members'>
+                            <span className="material-symbols-outlined">
+                                <AiOutlineMail />
+                            </span>
+                            <h3>Manage Staff</h3>
+                        </NavLink>
+                        <NavLink className="side-nav" to='/admin/all-groups'>
                             <span className="material-symbols-outlined">
                                 <MdOutlineAnalytics />
                             </span>
-                            <h3>Create User</h3>
+                            <h3>Manage Group</h3>
                         </NavLink>
-                        <NavLink className="side-nav" to='/add-staff'>
+                        
+                        
+                        <NavLink className="side-nav" to='/admin/messages'>
                             <span className="material-symbols-outlined">
                                 <AiOutlineMail />
                             </span>
-                            <h3>Staff Members</h3>
+                            <h3>Messages Count</h3>
                         </NavLink>
-                        <NavLink className="side-nav" to='/messages'>
-                            <span className="material-symbols-outlined">
-                                <AiOutlineMail />
-                            </span>
-                            <h3>Messages</h3>
-                        </NavLink>
-                        {/* <NavLink className="side-nav" to='/settings'>
+                        
+                        <NavLink className="side-nav" to='/admin/settings'>
                             <span className="material-symbols-outlined">
                                 <IoMdSettings />
                             </span>
-                            <h3>Settings</h3>
-                        </NavLink> */}
+                            <h3>Manage Delete Setting</h3>
+                        </NavLink>
                         <NavLink className="side-nav" to='/logout'>
                             <span className="material-symbols-outlined">
                                 <AiOutlineLogout />
